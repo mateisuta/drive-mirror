@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drive-mirror"
+version = "0.1.0"
+description = "Back up chosen folders into Google Drive (or any synced folder), same layout, copy-only."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License",
+               "Operating System :: OS Independent", "Topic :: System :: Archiving :: Backup"]
+
+[project.scripts]
+drive-mirror = "drive_mirror.__main__:main"
+
+[tool.setuptools]
+packages = ["drive_mirror"]
